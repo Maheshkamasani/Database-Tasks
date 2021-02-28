@@ -1,0 +1,329 @@
+mysql> set @@default_storage_engine = 'MyISAM';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create database  StudentRecordWithMyISAM;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use  StudentRecordWithMyISAM;
+Database changed
+mysql> create table StudentRecordWithMyISAM (Id int, StudentName varchar(100),StudentAge int) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> Query OK, 0 rows affected (0.12 sec)
+    -> mysql>
+    -> mysql>
+    -> mysql>
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Query OK, 0 rows affected (0.12 sec)
+mysql>
+mysql>
+mysql>' at line 1
+mysql> DESC StudentRecordWithMyISAM;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| Id          | int(11)      | YES  |     | NULL    |       |
+| StudentName | varchar(100) | YES  |     | NULL    |       |
+| StudentAge  | int(11)      | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show tables;
++-----------------------------------+
+| Tables_in_StudentRecordWithMyISAM |
++-----------------------------------+
+| StudentRecordWithMyISAM           |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TABLE_NAME,
+    -> ENGINE
+    -> FROM information_schema.TABLES
+    -> WHERE TABLE_SCHEMA = 'business' and ENGINE = 'MyISAM';
+Empty set (0.00 sec)
+
+mysql> show tables;
++-----------------------------------+
+| Tables_in_StudentRecordWithMyISAM |
++-----------------------------------+
+| StudentRecordWithMyISAM           |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| StudentRecordWithMyISAM |
+| mysql                   |
+| performance_schema      |
++-------------------------+
+4 rows in set (0.00 sec)
+
+mysql> create database  MaheshWithMyISAM;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| MaheshWithMyISAM        |
+| StudentRecordWithMyISAM |
+| mysql                   |
+| performance_schema      |
++-------------------------+
+5 rows in set (0.00 sec)
+
+mysql> use  MaheshWithMyISAM;
+Database changed
+mysql>  create table MaheshWithMyISAM (Id int, StudentName varchar(100),StudentAge int) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc MaheshWithMyISAM;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| Id          | int(11)      | YES  |     | NULL    |       |
+| StudentName | varchar(100) | YES  |     | NULL    |       |
+| StudentAge  | int(11)      | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| MaheshWithMyISAM        |
+| StudentRecordWithMyISAM |
+| mysql                   |
+| performance_schema      |
++-------------------------+
+5 rows in set (0.00 sec)
+
+mysql> create database MadhanWithMYISAM;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create table MadhanWithMyISAM (Id int, StudentName varchar(100),StudentAge int) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> use MadhanWithMyISAM;
+ERROR 1049 (42000): Unknown database 'MadhanWithMyISAM'
+mysql>
+
+
+
+
+
+
+ create database chinnawithMyISAM;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use chinnawithMyISAM;
+Database changed
+mysql> create table chinnaWithMyISAM (Id int, StudentName varchar(100),StudentAge int) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.01 sec)
+mysql> describe chinnaWithMyISAM;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| Id          | int(11)      | YES  |     | NULL    |       |
+| StudentName | varchar(100) | YES  |     | NULL    |       |
+| StudentAge  | int(11)      | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> create database venkat;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| MadhanWithMYISAM        |
+| MaheshWithMyISAM        |
+| StudentRecordWithMyISAM |
+| chinnawithMyISAM        |
+| mysql                   |
+| performance_schema      |
+| venkat                  |
++-------------------------+
+8 rows in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| MadhanWithMYISAM        |
+| MaheshWithMyISAM        |
+| StudentRecordWithMyISAM |
+| chinnawithMyISAM        |
+| mysql                   |
+| performance_schema      |
+| venkat                  |
++-------------------------+
+8 rows in set (0.00 sec)
+
+mysql> use venkat;
+Database changed
+mysql> CREATE TABLE Venkat(
+    -> id INT NOT NULL AUTO_INCREMENT,
+    ->  PRIMARY KEY (id),
+    -> data VARCHAR(20) NOT NULL
+    -> )ENGINE = MyISAM;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc Venkat;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| data  | varchar(20) | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> create database sai;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use sai;
+Database changed
+mysql> CREATE TABLE sai(
+    -> id INT NOT NULL AUTO_INCREMENT,
+    ->  PRIMARY KEY (id),
+    -> data VARCHAR(20) NOT NULL
+    ->  )ENGINE = MyISAM;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc sai;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| data  | varchar(20) | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| MadhanWithMYISAM        |
+| MaheshWithMyISAM        |
+| StudentRecordWithMyISAM |
+| chinnawithMyISAM        |
+| mysql                   |
+| performance_schema      |
+| sai                     |
+| venkat                  |
++-------------------------+
+9 rows in set (0.00 sec)
+
+mysql> use StudentRecordWithMyISAM;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> INSERT INTO StudentRecordWithMyISAM (id , studentname , studentage)values(1 , 'mahi' , '22');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO StudentRecordWithMyISAM (id , studentname , studentage)values(2 , 'madhan' , '20');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO StudentRecordWithMyISAM (id , studentname , studentage)values(3 , 'laddu' , '20');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO StudentRecordWithMyISAM (id , studentname , studentage)values(4 , 'babu' , '10');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO StudentRecordWithMyISAM (id , studentname , studentage)values(5 , 'siraz' , '07');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO StudentRecordWithMyISAM (id , studentname , studentage)values(6 , 'rakshitha' , '05');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use StudentRecordWithMyISAM;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> select *from StudentRecordWithMyISAM;
++------+-------------+------------+
+| Id   | StudentName | StudentAge |
++------+-------------+------------+
+|    1 | mahi        |         22 |
+|    2 | madhan      |         20 |
+|    3 | laddu       |         20 |
+|    4 | babu        |         10 |
+|    5 | siraz       |          7 |
+|    6 | rakshitha   |          5 |
++------+-------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> alter table  StudentRecordWithMyISAM ENGINE=InnoDB;
+Query OK, 6 rows affected (0.16 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> show create table StudentRecordWithMyISAM;
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table                   | Create Table                                                                                                                                                                                |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| StudentRecordWithMyISAM | CREATE TABLE `StudentRecordWithMyISAM` (
+  `Id` int(11) DEFAULT NULL,
+  `StudentName` varchar(100) DEFAULT NULL,
+  `StudentAge` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
++-------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> set @@default_storage_engine = 'MyISAM';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show engines;
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| Engine             | Support | Comment                                                        | Transactions | XA   | Savepoints |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+| MEMORY             | YES     | Hash based, stored in memory, useful for temporary tables      | NO           | NO   | NO         |
+| CSV                | YES     | CSV storage engine                                             | NO           | NO   | NO         |
+| MRG_MYISAM         | YES     | Collection of identical MyISAM tables                          | NO           | NO   | NO         |
+| BLACKHOLE          | YES     | /dev/null storage engine (anything you write to it disappears) | NO           | NO   | NO         |
+| MyISAM             | DEFAULT | MyISAM storage engine                                          | NO           | NO   | NO         |
+| InnoDB             | YES     | Supports transactions, row-level locking, and foreign keys     | YES          | YES  | YES        |
+| ARCHIVE            | YES     | Archive storage engine                                         | NO           | NO   | NO         |
+| PERFORMANCE_SCHEMA | YES     | Performance Schema                                             | NO           | NO   | NO         |
+| FEDERATED          | NO      | Federated MySQL storage engine                                 | NULL         | NULL | NULL       |
++--------------------+---------+----------------------------------------------------------------+--------------+------+------------+
+9 rows in set (0.00 sec)
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| MadhanWithMYISAM        |
+| MaheshWithMyISAM        |
+| StudentRecordWithMyISAM |
+| chinnawithMyISAM        |
+| mysql                   |
+| performance_schema      |
+| sai                     |
+| venkat                  |
++-------------------------+
+9 rows in set (0.00 sec)
+
+mysql> show table status from StudentRecordWithMyISAM;
++-------------------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-------------------+----------+----------------+---------+
+| Name                    | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation         | Checksum | Create_options | Comment |
++-------------------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-------------------+----------+----------------+---------+
+| StudentRecordWithMyISAM | InnoDB |      10 | Compact    |    6 |           2730 |       16384 |               0 |            0 |         0 |           NULL | 2021-02-28 18:09:32 | NULL        | NULL       | latin1_swedish_ci |     NULL |                |         |
++-------------------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-------------------+----------+----------------+---------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+
